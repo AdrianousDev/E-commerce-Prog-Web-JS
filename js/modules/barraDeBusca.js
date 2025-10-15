@@ -1,5 +1,6 @@
 import exibirProdutos from "./exibirProdutos.js";
 import quantidadeProdutos from "./quantidadeProdutos.js";
+import initModal from "./initModal.js";
 
 export default function barraDeBusca(produtos) {
   const formSearch = document.querySelector("#form-search");
@@ -20,6 +21,7 @@ export default function barraDeBusca(produtos) {
     );
 
     exibirProdutos(produtosFiltrados);
+    initModal(produtosFiltrados);
     quantidadeProdutos(produtosFiltrados.length);
   });
 }
