@@ -1,6 +1,6 @@
 import exibirProdutos from "./exibirProdutos.js";
 import quantidadeProdutos from "./quantidadeProdutos.js";
-import initModal from "./initModal.js";
+import initModal from "../modal/initModal.js";
 
 export default function barraDeBusca(produtos) {
   const formSearch = document.querySelector("#form-search");

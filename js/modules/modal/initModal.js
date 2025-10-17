@@ -1,4 +1,6 @@
 import preencherModalProduto from "./preencherModalProduto.js";
+import exibirItemCarrinho from "../carrinhoHomePage/exibirItemCarrinho.js";
+import adicionarItemCarrinhoLocalStorage from "../carrinhoHomePage/adicionarItemCarrinhoLocalStorage.js";
 
 export default function initModal(produtos) {
   const botaoFechar = document.querySelector("[data-modal='fechar']");
@@ -17,6 +19,15 @@ export default function initModal(produtos) {
         const id = event.currentTarget.dataset.id;
         const produtoEscolhido = produtos.find((produto) => produto.id == id);
         preencherModalProduto(produtoEscolhido);
+
+        // adiciona evento ao button "adicionar carrinho" do card/produto clicado.
+        const buttonAddCart = document.querySelector("[data-buttonAddCart]");
+        buttonAddCart.addEventListener("click", () => {
+          const produtoEscolhido = produtos.find(
+            (p) => p.id == buttonAddCart.dataset.id
+          );
+          adicionarItemCarrinhoLocalStorage(produtoEscolhido);
+        });
       }
     }
 

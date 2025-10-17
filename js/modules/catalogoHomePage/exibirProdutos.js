@@ -6,7 +6,7 @@ export default function exibirProdutos(produtos) {
     const card = document.createElement("div");
 
     card.innerHTML = `
-      <div class="bg-white rounded-lg shadow-md overflow-hidden p-4 flex flex-col justify-between h-full" data-produto data-id="${
+      <div class="bg-white rounded-lg shadow-md overflow-hidden p-4 flex flex-col justify-between h-full cursor-pointer" data-produto data-id="${
         produto.id
       }">
         <h5 class="text-lg font-semibold text-center text-blue-800 mb-4 line-clamp-1" title="${

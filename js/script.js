@@ -1,9 +1,10 @@
 import chamarApi from "./modules/chamarApi.js";
-import exibirProdutos from "./modules/exibirProdutos.js";
-import initCategorias from "./modules/categorias.js";
-import quantidadeProdutos from "./modules/quantidadeProdutos.js";
-import barraDeBusca from "./modules/barraDeBusca.js";
-import initModal from "./modules/initModal.js";
+import exibirProdutos from "./modules/catalogoHomePage/exibirProdutos.js";
+import initCategorias from "./modules/catalogoHomePage/categorias.js";
+import quantidadeProdutos from "./modules/catalogoHomePage/quantidadeProdutos.js";
+import barraDeBusca from "./modules/catalogoHomePage/barraDeBusca.js";
+import initModal from "./modules/modal/initModal.js";
+import initCarrinho from "./modules/carrinhoHomePage/initCarrinho.js";
 
 const urlProdutos = "https://fakestoreapi.com/products";
 const produtos = await chamarApi(urlProdutos);
@@ -16,3 +17,4 @@ initCategorias(produtos, categorias);
 quantidadeProdutos(produtos.length);
 barraDeBusca(produtos);
 initModal(produtos);
+initCarrinho(produtos);

@@ -16,10 +16,12 @@
       class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6"
     >
       <section id="filter" class="bg-white p-6 rounded-lg shadow h-min">
-        <div>
+        <div class="mb-5">
           <h3 class="text-xl font-semibold mb-4 border-b pb-2">
             Categorias
-            <span id="marcador" class="text-sm text-gray-500">(filtro)</span>
+            <span id="marcadorCategoria" class="text-sm text-gray-500"
+              >0 produtos</span
+            >
           </h3>
           <div id="categorias" class="space-y-2">
             <button
@@ -29,6 +31,15 @@
               Todas as Categorias
             </button>
           </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4 border-b pb-2">
+            Carrinho
+            <span id="marcadorCarrinho" class="text-sm text-gray-500"
+              >0 produtos</span
+            >
+          </h3>
+          <div id="carrinho"></div>
         </div>
       </section>
 
@@ -57,6 +68,7 @@
       </section>
     </main>
 
+    <!-- modal de produtos -->
     <section
       class="hidden fixed h-screen w-full bg-gray-800/50 top-0 left-0 z-50 justify-center items-center"
       data-modal="container"
